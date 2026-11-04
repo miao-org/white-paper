@@ -1,0 +1,1181 @@
+{
+  "schemaVersion": "0.1.0",
+  "status": "brainstorm",
+  "title": {
+    "en": "Robotics knowledge graph",
+    "zh-CN": "机器人知识图谱"
+  },
+  "description": {
+    "en": "An experimental map, not an agreed curriculum. The 2016 article supplies historical topics; stage placement, dependencies and assessment examples are proposals. Theory and Engineering are views of one graph, with shared node identities.",
+    "zh-CN": "这是一张供讨论的实验性地图，并非已确定的课程。2016 年文章提供历史主题；阶段划分、依赖关系和考核示例均为提案。理论与工程是同一图谱的不同视图，共享节点保持同一身份。"
+  },
+  "sources": [
+    {
+      "id": "learning-plan-2016",
+      "title": {
+        "en": "Robotics Engineer Learning Plan — YY硕, 2016-09-08 (archived article)",
+        "zh-CN": "机器人工程师学习计划 — YY硕，2016-09-08（文章存档）"
+      },
+      "url": "https://github.com/ShuoYangRobotics/personal-ai-space/blob/main/zhihu-writing/articles/2016-09-08_%E6%9C%BA%E5%99%A8%E4%BA%BA%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92.md"
+    },
+    {
+      "id": "tree-proposal-2026",
+      "title": {
+        "en": "Issue #1 — a robotics tech tree for people and agents",
+        "zh-CN": "Issue #1 — 面向人和 Agent 的机器人科技树"
+      },
+      "url": "https://github.com/miao-org/white-paper/issues/1"
+    }
+  ],
+  "stages": [
+    {
+      "id": "foundations",
+      "title": {
+        "en": "Foundations",
+        "zh-CN": "基础"
+      },
+      "description": {
+        "en": "Mathematical language and tools for building.",
+        "zh-CN": "建立数学语言与动手工具。"
+      }
+    },
+    {
+      "id": "models",
+      "title": {
+        "en": "Models & mechanisms",
+        "zh-CN": "模型与机构"
+      },
+      "description": {
+        "en": "Describe, measure and control physical systems.",
+        "zh-CN": "描述、测量并控制物理系统。"
+      }
+    },
+    {
+      "id": "autonomy",
+      "title": {
+        "en": "Perception & decisions",
+        "zh-CN": "感知与决策"
+      },
+      "description": {
+        "en": "Turn observations and models into useful actions.",
+        "zh-CN": "把观测与模型转化为有效行动。"
+      }
+    },
+    {
+      "id": "integration",
+      "title": {
+        "en": "Systems & evidence",
+        "zh-CN": "系统与验证"
+      },
+      "description": {
+        "en": "Combine capabilities and explain what works.",
+        "zh-CN": "组合各项能力，并说明有效性的依据。"
+      }
+    }
+  ],
+  "nodes": [
+    {
+      "id": "linear-algebra",
+      "title": {
+        "en": "Linear algebra",
+        "zh-CN": "线性代数"
+      },
+      "summary": {
+        "en": "Use vectors and matrices to represent geometry and solve systems.",
+        "zh-CN": "用向量与矩阵表达几何关系并求解方程组。"
+      },
+      "tracks": [
+        "theory"
+      ],
+      "stage": "foundations",
+      "slot": 0,
+      "topics": [
+        "matrices",
+        "vectors",
+        "线性代数",
+        "矩阵",
+        "向量"
+      ],
+      "outcomes": [
+        {
+          "en": "Solve a small linear system and explain the residual.",
+          "zh-CN": "求解一个小型线性方程组并解释残差。"
+        }
+      ],
+      "evidence": {
+        "en": "A worked derivation and a numerical check of the same system.",
+        "zh-CN": "同一方程组的推导过程与数值检验。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "calculus-probability",
+      "title": {
+        "en": "Calculus & probability",
+        "zh-CN": "微积分与概率"
+      },
+      "summary": {
+        "en": "Describe changing quantities and uncertainty in measurements.",
+        "zh-CN": "描述随时间变化的量与测量中的不确定性。"
+      },
+      "tracks": [
+        "theory"
+      ],
+      "stage": "foundations",
+      "slot": 1,
+      "topics": [
+        "derivatives",
+        "probability",
+        "uncertainty",
+        "微积分",
+        "概率",
+        "不确定性"
+      ],
+      "outcomes": [
+        {
+          "en": "Model a changing signal and estimate the spread of noisy observations.",
+          "zh-CN": "对变化信号建模，并估计含噪观测的离散程度。"
+        }
+      ],
+      "evidence": {
+        "en": "A signal plot with derivatives, sample statistics and stated assumptions.",
+        "zh-CN": "包含导数、样本统计量和假设说明的信号图。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "numerical-programming",
+      "title": {
+        "en": "Numerical programming",
+        "zh-CN": "数值编程"
+      },
+      "summary": {
+        "en": "Translate small mathematical models into inspectable Python or C++ programs.",
+        "zh-CN": "将小型数学模型转化为可检查的 Python 或 C++ 程序。"
+      },
+      "tracks": [
+        "theory",
+        "engineering"
+      ],
+      "stage": "foundations",
+      "slot": 0,
+      "topics": [
+        "Python",
+        "C++",
+        "NumPy",
+        "numerics",
+        "数值计算",
+        "编程"
+      ],
+      "outcomes": [
+        {
+          "en": "Implement a matrix calculation and diagnose a numerical error.",
+          "zh-CN": "实现矩阵计算，并诊断一个数值误差问题。"
+        }
+      ],
+      "evidence": {
+        "en": "Runnable code, a reference result and a short error analysis.",
+        "zh-CN": "可运行代码、参考结果及简短的误差分析。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "linux-tooling",
+      "title": {
+        "en": "Linux & development tools",
+        "zh-CN": "Linux 与开发工具"
+      },
+      "summary": {
+        "en": "Build, version and inspect programs in a reproducible workspace.",
+        "zh-CN": "在可复现的工作环境中构建、管理并检查程序。"
+      },
+      "tracks": [
+        "engineering"
+      ],
+      "stage": "foundations",
+      "slot": 0,
+      "topics": [
+        "Linux",
+        "Git",
+        "CMake",
+        "debugging",
+        "构建",
+        "调试"
+      ],
+      "outcomes": [
+        {
+          "en": "Build a small project from a clean checkout and inspect a failure.",
+          "zh-CN": "从干净的仓库检出构建小项目，并排查一次失败。"
+        }
+      ],
+      "evidence": {
+        "en": "A repository with build instructions and a recorded debugging session.",
+        "zh-CN": "包含构建说明与调试记录的代码仓库。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "electronics-sensing",
+      "title": {
+        "en": "Electronics & sensors",
+        "zh-CN": "电子与传感器"
+      },
+      "summary": {
+        "en": "Connect a sensor and understand its signals, units and interface.",
+        "zh-CN": "连接传感器，并理解其信号、单位和接口。"
+      },
+      "tracks": [
+        "engineering"
+      ],
+      "stage": "foundations",
+      "slot": 1,
+      "topics": [
+        "sensors",
+        "ADC",
+        "UART",
+        "SPI",
+        "I2C",
+        "传感器",
+        "电路"
+      ],
+      "outcomes": [
+        {
+          "en": "Read a sensor and distinguish raw values from calibrated measurements.",
+          "zh-CN": "读取传感器，并区分原始数值与校准后的测量值。"
+        }
+      ],
+      "evidence": {
+        "en": "A wiring diagram and a measurement log with units and calibration notes.",
+        "zh-CN": "接线图，以及带单位和校准说明的测量日志。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "rigid-body-models",
+      "title": {
+        "en": "Rigid-body dynamics",
+        "zh-CN": "刚体动力学"
+      },
+      "summary": {
+        "en": "Relate forces, motion and inertia in a simple robot mechanism.",
+        "zh-CN": "在简单机器人机构中建立力、运动与惯量的关系。"
+      },
+      "tracks": [
+        "theory"
+      ],
+      "stage": "models",
+      "slot": 0,
+      "topics": [
+        "Newton-Euler",
+        "dynamics",
+        "inertia",
+        "动力学",
+        "惯量",
+        "牛顿欧拉"
+      ],
+      "outcomes": [
+        {
+          "en": "Derive a simple mechanism model and state the neglected effects.",
+          "zh-CN": "推导简单机构的模型，并说明忽略的效应。"
+        }
+      ],
+      "evidence": {
+        "en": "A free-body diagram, equations and comparison with a measured motion.",
+        "zh-CN": "受力图、方程，以及与实测运动的比较。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "feedback-control",
+      "title": {
+        "en": "Feedback control",
+        "zh-CN": "反馈控制"
+      },
+      "summary": {
+        "en": "Use a plant model and measurements to reason about closed-loop behavior.",
+        "zh-CN": "利用被控对象模型与测量来分析闭环行为。"
+      },
+      "tracks": [
+        "theory"
+      ],
+      "stage": "models",
+      "slot": 1,
+      "topics": [
+        "PID",
+        "stability",
+        "feedback",
+        "反馈",
+        "稳定性",
+        "控制"
+      ],
+      "outcomes": [
+        {
+          "en": "Explain how a controller changes tracking error and disturbance response.",
+          "zh-CN": "解释控制器如何改变跟踪误差和扰动响应。"
+        }
+      ],
+      "evidence": {
+        "en": "Step-response plots and a justified controller choice.",
+        "zh-CN": "阶跃响应曲线与控制器选型依据。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "coordinate-frames",
+      "title": {
+        "en": "Coordinate frames",
+        "zh-CN": "坐标系与旋转"
+      },
+      "summary": {
+        "en": "Connect geometric transformations to the frames used by sensors and robots.",
+        "zh-CN": "将几何变换与传感器、机器人使用的坐标系联系起来。"
+      },
+      "tracks": [
+        "theory",
+        "engineering"
+      ],
+      "stage": "models",
+      "slot": 0,
+      "topics": [
+        "rotations",
+        "quaternions",
+        "transforms",
+        "坐标系",
+        "四元数",
+        "旋转"
+      ],
+      "outcomes": [
+        {
+          "en": "Transform a point between two frames and check the inverse transformation.",
+          "zh-CN": "在两个坐标系间变换一个点，并检验逆变换。"
+        }
+      ],
+      "evidence": {
+        "en": "An annotated frame diagram and a round-trip transformation check.",
+        "zh-CN": "标注清楚的坐标系示意图与往返变换检验。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "stress-analysis",
+      "title": {
+        "en": "Stress analysis",
+        "zh-CN": "应力分析"
+      },
+      "summary": {
+        "en": "Connect load paths and stress concentration to a mechanical design decision.",
+        "zh-CN": "将载荷传递路径和应力集中与机械设计决策联系起来。"
+      },
+      "tracks": [
+        "theory",
+        "engineering"
+      ],
+      "stage": "models",
+      "slot": 1,
+      "topics": [
+        "stress",
+        "mechanics",
+        "FEA",
+        "fillet",
+        "应力",
+        "力学",
+        "有限元",
+        "圆角"
+      ],
+      "outcomes": [
+        {
+          "en": "Compare a simple stress estimate with a model and explain their assumptions.",
+          "zh-CN": "比较简单应力估算与模型结果，并解释各自的假设。"
+        }
+      ],
+      "evidence": {
+        "en": "A load-case sketch and stress comparison with boundary conditions stated.",
+        "zh-CN": "载荷工况草图，以及注明边界条件的应力比较。"
+      },
+      "sourceIds": [
+        "learning-plan-2016",
+        "tree-proposal-2026"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "mechanical-design",
+      "title": {
+        "en": "Mechanical design & CAD",
+        "zh-CN": "机械设计与 CAD"
+      },
+      "summary": {
+        "en": "Represent a buildable part with dimensions, materials and assembly intent.",
+        "zh-CN": "用尺寸、材料与装配意图表达可制造的零件。"
+      },
+      "tracks": [
+        "engineering"
+      ],
+      "stage": "models",
+      "slot": 0,
+      "topics": [
+        "CAD",
+        "manufacturing",
+        "materials",
+        "机械设计",
+        "加工",
+        "材料"
+      ],
+      "outcomes": [
+        {
+          "en": "Create a constrained part model and explain a manufacturing choice.",
+          "zh-CN": "建立带约束的零件模型，并说明制造方案的选择。"
+        }
+      ],
+      "evidence": {
+        "en": "A dimensioned drawing and a short assembly or manufacturing note.",
+        "zh-CN": "带尺寸的图纸与简短的装配或制造说明。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "embedded-control",
+      "title": {
+        "en": "Embedded control loop",
+        "zh-CN": "嵌入式控制回路"
+      },
+      "summary": {
+        "en": "Read sensors and command an actuator within a measured timing budget.",
+        "zh-CN": "在可测量的时序预算内读取传感器并控制执行器。"
+      },
+      "tracks": [
+        "engineering"
+      ],
+      "stage": "models",
+      "slot": 1,
+      "topics": [
+        "microcontroller",
+        "timing",
+        "motor",
+        "嵌入式",
+        "电机",
+        "实时"
+      ],
+      "outcomes": [
+        {
+          "en": "Run a feedback loop and identify the effect of sample timing.",
+          "zh-CN": "运行反馈回路，并识别采样时序的影响。"
+        }
+      ],
+      "evidence": {
+        "en": "Firmware and a log of sample intervals, commands and tracking error.",
+        "zh-CN": "固件，以及采样间隔、控制指令和跟踪误差的日志。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "state-estimation",
+      "title": {
+        "en": "State estimation",
+        "zh-CN": "状态估计"
+      },
+      "summary": {
+        "en": "Combine a motion model and noisy observations to estimate hidden state.",
+        "zh-CN": "结合运动模型与含噪观测来估计隐藏状态。"
+      },
+      "tracks": [
+        "theory"
+      ],
+      "stage": "autonomy",
+      "slot": 0,
+      "topics": [
+        "Kalman",
+        "fusion",
+        "uncertainty",
+        "卡尔曼",
+        "融合",
+        "状态估计"
+      ],
+      "outcomes": [
+        {
+          "en": "Implement a small estimator and inspect how uncertainty changes.",
+          "zh-CN": "实现小型估计器，并观察不确定性如何变化。"
+        }
+      ],
+      "evidence": {
+        "en": "Estimated and reference trajectories with residual and uncertainty plots.",
+        "zh-CN": "估计轨迹与参考轨迹，以及残差和不确定性曲线。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "motion-planning",
+      "title": {
+        "en": "Motion planning",
+        "zh-CN": "运动规划"
+      },
+      "summary": {
+        "en": "Search for feasible robot motion under explicit geometric constraints.",
+        "zh-CN": "在明确的几何约束下搜索可行的机器人运动。"
+      },
+      "tracks": [
+        "theory"
+      ],
+      "stage": "autonomy",
+      "slot": 1,
+      "topics": [
+        "planning",
+        "search",
+        "collision",
+        "规划",
+        "搜索",
+        "碰撞"
+      ],
+      "outcomes": [
+        {
+          "en": "Find a collision-free path and explain when the planner can fail.",
+          "zh-CN": "找到无碰撞路径，并解释规划器可能失败的情形。"
+        }
+      ],
+      "evidence": {
+        "en": "A reproducible planning scene with a successful case and a failure case.",
+        "zh-CN": "包含成功与失败案例的可复现规划场景。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "perception",
+      "title": {
+        "en": "Perception & geometry",
+        "zh-CN": "感知与几何"
+      },
+      "summary": {
+        "en": "Extract geometric information from sensor data and test its limitations.",
+        "zh-CN": "从传感器数据提取几何信息，并检验其局限。"
+      },
+      "tracks": [
+        "theory",
+        "engineering"
+      ],
+      "stage": "autonomy",
+      "slot": 0,
+      "topics": [
+        "vision",
+        "odometry",
+        "calibration",
+        "视觉",
+        "里程计",
+        "标定"
+      ],
+      "outcomes": [
+        {
+          "en": "Estimate a geometric quantity and inspect sensitivity to calibration.",
+          "zh-CN": "估计一个几何量，并检查其对标定误差的敏感性。"
+        }
+      ],
+      "evidence": {
+        "en": "A small recorded dataset, an estimate and an error analysis.",
+        "zh-CN": "小型记录数据集、估计结果与误差分析。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "middleware-integration",
+      "title": {
+        "en": "Robot software integration",
+        "zh-CN": "机器人软件集成"
+      },
+      "summary": {
+        "en": "Connect robot modules through documented messages, frames and timing contracts.",
+        "zh-CN": "通过文档化的消息、坐标系和时序约定连接机器人模块。"
+      },
+      "tracks": [
+        "engineering"
+      ],
+      "stage": "autonomy",
+      "slot": 0,
+      "topics": [
+        "ROS",
+        "ROS 2",
+        "middleware",
+        "messages",
+        "软件集成",
+        "中间件"
+      ],
+      "outcomes": [
+        {
+          "en": "Connect sensor, estimator and controller modules with traceable data flow.",
+          "zh-CN": "连接传感器、估计器与控制器模块，并使数据流可追溯。"
+        }
+      ],
+      "evidence": {
+        "en": "An interface diagram and a recorded run that can be replayed.",
+        "zh-CN": "接口图，以及能够回放的运行记录。"
+      },
+      "sourceIds": [
+        "learning-plan-2016",
+        "tree-proposal-2026"
+      ],
+      "provenance": "proposal"
+    },
+    {
+      "id": "fillet-design",
+      "title": {
+        "en": "Design a stress-relief fillet",
+        "zh-CN": "应力释放圆角设计"
+      },
+      "summary": {
+        "en": "Use a stress comparison to choose and document a CAD fillet.",
+        "zh-CN": "利用应力比较来选择并记录 CAD 过渡圆角。"
+      },
+      "tracks": [
+        "engineering"
+      ],
+      "stage": "autonomy",
+      "slot": 1,
+      "topics": [
+        "fillet",
+        "CAD",
+        "stress concentration",
+        "圆角",
+        "过渡",
+        "应力集中"
+      ],
+      "outcomes": [
+        {
+          "en": "Compare sharp and rounded transitions under the same load assumptions.",
+          "zh-CN": "在相同载荷假设下比较尖角与圆角过渡。"
+        }
+      ],
+      "evidence": {
+        "en": "Before-and-after CAD views with radius, mesh checks and a design rationale.",
+        "zh-CN": "修改前后的 CAD 视图，注明半径、网格检查与设计依据。"
+      },
+      "sourceIds": [
+        "tree-proposal-2026"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "optimization",
+      "title": {
+        "en": "Optimization",
+        "zh-CN": "优化方法"
+      },
+      "summary": {
+        "en": "Formulate an objective, constraints and numerical checks for a robot problem.",
+        "zh-CN": "针对机器人问题定义目标、约束与数值检查。"
+      },
+      "tracks": [
+        "theory"
+      ],
+      "stage": "integration",
+      "slot": 0,
+      "topics": [
+        "optimization",
+        "gradient",
+        "constraints",
+        "优化",
+        "梯度",
+        "约束"
+      ],
+      "outcomes": [
+        {
+          "en": "Solve a small constrained problem and check the quality of its solution.",
+          "zh-CN": "求解小型约束问题，并检查解的质量。"
+        }
+      ],
+      "evidence": {
+        "en": "An objective definition, solver trace and constraint-residual check.",
+        "zh-CN": "目标函数定义、求解记录与约束残差检查。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "system-simulation",
+      "title": {
+        "en": "System simulation",
+        "zh-CN": "系统仿真"
+      },
+      "summary": {
+        "en": "Combine models into a simulation and document where it diverges from reality.",
+        "zh-CN": "将模型组合为仿真系统，并记录其与现实的偏差。"
+      },
+      "tracks": [
+        "theory",
+        "engineering"
+      ],
+      "stage": "integration",
+      "slot": 0,
+      "topics": [
+        "simulation",
+        "contact",
+        "validation",
+        "仿真",
+        "接触",
+        "验证"
+      ],
+      "outcomes": [
+        {
+          "en": "Compare a simulated behavior with a reference and identify model limitations.",
+          "zh-CN": "将仿真行为与参考结果比较，并识别模型局限。"
+        }
+      ],
+      "evidence": {
+        "en": "A reproducible scenario with parameters, plots and a model-limit note.",
+        "zh-CN": "可复现的场景，附参数、图表与模型局限说明。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    },
+    {
+      "id": "robotics-integration",
+      "title": {
+        "en": "Integrated robot project",
+        "zh-CN": "机器人综合项目"
+      },
+      "summary": {
+        "en": "Demonstrate a robot task while tracing decisions back to models and measurements.",
+        "zh-CN": "演示一项机器人任务，并把决策追溯到模型和测量依据。"
+      },
+      "tracks": [
+        "theory",
+        "engineering"
+      ],
+      "stage": "integration",
+      "slot": 1,
+      "topics": [
+        "capstone",
+        "robot",
+        "integration",
+        "综合项目",
+        "机器人",
+        "集成"
+      ],
+      "outcomes": [
+        {
+          "en": "Complete a bounded robot task and explain measured success and failure cases.",
+          "zh-CN": "完成边界明确的机器人任务，并解释测得的成功与失败案例。"
+        }
+      ],
+      "evidence": {
+        "en": "A runnable project, demonstration, logs and an account of limitations.",
+        "zh-CN": "可运行项目、演示、日志与局限说明。"
+      },
+      "sourceIds": [
+        "learning-plan-2016",
+        "tree-proposal-2026"
+      ],
+      "provenance": "proposal"
+    },
+    {
+      "id": "technical-communication",
+      "title": {
+        "en": "Technical communication",
+        "zh-CN": "技术表达"
+      },
+      "summary": {
+        "en": "Explain design choices, results and unresolved questions so others can review them.",
+        "zh-CN": "清楚说明设计选择、结果与待解决问题，便于他人评审。"
+      },
+      "tracks": [
+        "engineering"
+      ],
+      "stage": "integration",
+      "slot": 0,
+      "topics": [
+        "report",
+        "presentation",
+        "reproducibility",
+        "报告",
+        "演示",
+        "复现"
+      ],
+      "outcomes": [
+        {
+          "en": "Present one technical claim with a diagram, evidence and stated limitations.",
+          "zh-CN": "用图示、证据与局限说明来表达一项技术结论。"
+        }
+      ],
+      "evidence": {
+        "en": "A concise report or presentation that a peer can follow and reproduce.",
+        "zh-CN": "一份同行能够理解并复现的简明报告或演示材料。"
+      },
+      "sourceIds": [
+        "learning-plan-2016"
+      ],
+      "provenance": "adapted"
+    }
+  ],
+  "edges": [
+    {
+      "id": "linear-algebra--numerical-programming",
+      "from": "linear-algebra",
+      "to": "numerical-programming",
+      "type": "application",
+      "rationale": {
+        "en": "Matrix calculations provide a small, checkable programming exercise.",
+        "zh-CN": "矩阵计算提供小型、可检验的编程练习。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "linear-algebra--coordinate-frames",
+      "from": "linear-algebra",
+      "to": "coordinate-frames",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Frame transformations use vectors and matrices.",
+        "zh-CN": "坐标变换使用向量与矩阵。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "calculus-probability--rigid-body-models",
+      "from": "calculus-probability",
+      "to": "rigid-body-models",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Rates of change describe motion and its equations.",
+        "zh-CN": "变化率用于描述运动及其方程。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "rigid-body-models--feedback-control",
+      "from": "rigid-body-models",
+      "to": "feedback-control",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "A plant model gives feedback design a physical interpretation.",
+        "zh-CN": "被控对象模型为反馈设计提供物理解释。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "calculus-probability--stress-analysis",
+      "from": "calculus-probability",
+      "to": "stress-analysis",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Spatial variation and integration support load and stress reasoning.",
+        "zh-CN": "空间变化与积分为载荷和应力分析提供基础。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "stress-analysis--fillet-design",
+      "from": "stress-analysis",
+      "to": "fillet-design",
+      "type": "application",
+      "rationale": {
+        "en": "Compare stress concentration to justify the transition radius.",
+        "zh-CN": "通过比较应力集中来论证过渡圆角半径。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "mechanical-design--fillet-design",
+      "from": "mechanical-design",
+      "to": "fillet-design",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "A constrained CAD part is needed to make and compare the geometric change.",
+        "zh-CN": "需要带约束的 CAD 零件，才能修改并比较几何形状。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "electronics-sensing--embedded-control",
+      "from": "electronics-sensing",
+      "to": "embedded-control",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "The loop needs interpretable sensor readings and actuator interfaces.",
+        "zh-CN": "控制回路需要可解释的传感器读数和执行器接口。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "feedback-control--embedded-control",
+      "from": "feedback-control",
+      "to": "embedded-control",
+      "type": "application",
+      "rationale": {
+        "en": "Implement the control law with measured sample timing.",
+        "zh-CN": "按实测采样时序实现控制律。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "numerical-programming--embedded-control",
+      "from": "numerical-programming",
+      "to": "embedded-control",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "A control loop requires an executable numerical implementation.",
+        "zh-CN": "控制回路需要可执行的数值实现。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "linux-tooling--middleware-integration",
+      "from": "linux-tooling",
+      "to": "middleware-integration",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Build and debugging tools support reproducible module integration.",
+        "zh-CN": "构建与调试工具支持可复现的模块集成。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "calculus-probability--state-estimation",
+      "from": "calculus-probability",
+      "to": "state-estimation",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Estimation represents measurement uncertainty with probability.",
+        "zh-CN": "状态估计用概率表达测量不确定性。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "coordinate-frames--state-estimation",
+      "from": "coordinate-frames",
+      "to": "state-estimation",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Measurements must be interpreted in consistent coordinate frames.",
+        "zh-CN": "需要在一致的坐标系中解释测量值。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "coordinate-frames--perception",
+      "from": "coordinate-frames",
+      "to": "perception",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Geometric observations must be related across sensor and robot frames.",
+        "zh-CN": "需要关联传感器与机器人坐标系中的几何观测。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "electronics-sensing--perception",
+      "from": "electronics-sensing",
+      "to": "perception",
+      "type": "application",
+      "rationale": {
+        "en": "Real sensor data exposes calibration and measurement limitations.",
+        "zh-CN": "真实传感器数据可以揭示标定与测量的局限。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "coordinate-frames--motion-planning",
+      "from": "coordinate-frames",
+      "to": "motion-planning",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Paths and obstacles need a consistent geometric representation.",
+        "zh-CN": "路径与障碍物需要一致的几何表达。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "numerical-programming--motion-planning",
+      "from": "numerical-programming",
+      "to": "motion-planning",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Search and collision checks require executable algorithms.",
+        "zh-CN": "搜索与碰撞检查需要可执行的算法。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "state-estimation--middleware-integration",
+      "from": "state-estimation",
+      "to": "middleware-integration",
+      "type": "application",
+      "rationale": {
+        "en": "Expose estimated state with documented frames and timestamps.",
+        "zh-CN": "通过接口提供状态估计，并记录坐标系和时间戳。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "embedded-control--middleware-integration",
+      "from": "embedded-control",
+      "to": "middleware-integration",
+      "type": "application",
+      "rationale": {
+        "en": "Connect command and feedback interfaces across robot modules.",
+        "zh-CN": "连接机器人各模块的指令与反馈接口。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "linear-algebra--optimization",
+      "from": "linear-algebra",
+      "to": "optimization",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Objectives and constraints often use vector and matrix operations.",
+        "zh-CN": "目标与约束常使用向量和矩阵运算。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "calculus-probability--optimization",
+      "from": "calculus-probability",
+      "to": "optimization",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Derivatives describe local changes in the objective.",
+        "zh-CN": "导数描述目标函数的局部变化。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "rigid-body-models--system-simulation",
+      "from": "rigid-body-models",
+      "to": "system-simulation",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "Simulation needs equations that connect forces and motion.",
+        "zh-CN": "仿真需要关联力与运动的方程。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "numerical-programming--system-simulation",
+      "from": "numerical-programming",
+      "to": "system-simulation",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "A simulator numerically evaluates the chosen model.",
+        "zh-CN": "仿真器需要数值求解所选模型。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "optimization--system-simulation",
+      "from": "optimization",
+      "to": "system-simulation",
+      "type": "application",
+      "rationale": {
+        "en": "Use a simulated scenario to compare optimized parameters.",
+        "zh-CN": "在仿真场景中比较优化后的参数。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "system-simulation--robotics-integration",
+      "from": "system-simulation",
+      "to": "robotics-integration",
+      "type": "application",
+      "rationale": {
+        "en": "Rehearse task behavior and expose model gaps before integration.",
+        "zh-CN": "在集成前演练任务行为并发现模型差距。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "middleware-integration--robotics-integration",
+      "from": "middleware-integration",
+      "to": "robotics-integration",
+      "type": "prerequisite",
+      "rationale": {
+        "en": "A robot project needs its software modules to communicate.",
+        "zh-CN": "机器人项目需要软件模块互相通信。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "motion-planning--robotics-integration",
+      "from": "motion-planning",
+      "to": "robotics-integration",
+      "type": "application",
+      "rationale": {
+        "en": "A planned motion becomes one capability of the integrated task.",
+        "zh-CN": "规划出的运动成为综合任务中的一项能力。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "perception--robotics-integration",
+      "from": "perception",
+      "to": "robotics-integration",
+      "type": "application",
+      "rationale": {
+        "en": "Observations connect the task to its physical surroundings.",
+        "zh-CN": "观测把任务与物理环境联系起来。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "fillet-design--robotics-integration",
+      "from": "fillet-design",
+      "to": "robotics-integration",
+      "type": "application",
+      "rationale": {
+        "en": "A justified part design connects mechanical decisions to the whole robot.",
+        "zh-CN": "有依据的零件设计将机械决策与整机联系起来。"
+      },
+      "provenance": "proposal"
+    },
+    {
+      "id": "technical-communication--robotics-integration",
+      "from": "technical-communication",
+      "to": "robotics-integration",
+      "type": "application",
+      "rationale": {
+        "en": "Explain the evidence and remaining limitations of the completed task.",
+        "zh-CN": "说明已完成任务的证据与剩余局限。"
+      },
+      "provenance": "proposal"
+    }
+  ]
+}

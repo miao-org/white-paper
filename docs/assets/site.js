@@ -1,7 +1,7 @@
 (() => {
   // Give the default language a real route so relative Markdown links retain it.
   if (!location.hash || /^#\/?$/.test(location.hash)) history.replaceState(null, '', '#/en/');
-  const published = location.hostname === 'diaoorg.github.io';
+  const published = location.hostname === 'miao-org.github.io';
   const liveMarkdown = (path, _match, next) => {
     const route = path === '/' ? '/en/' : path;
     if (!/^\/(en|zh-CN)\/(?:[\w-]+\/)*[\w.-]*$/.test(route) || route.includes('..')) {
@@ -11,7 +11,7 @@
     const file = route.endsWith('/') ? `${route}README.md` : `${route.replace(/\.md$/, '')}.md`;
     // Read the merged source directly: Markdown-only PRs do not wait for a
     // Pages deployment. The unique query avoids reusing a stale CDN response.
-    fetch(`https://raw.githubusercontent.com/DiaoOrg/white-paper/main/docs${file}?v=${Date.now()}`, { cache: 'no-store', signal: AbortSignal.timeout(8000) })
+    fetch(`https://raw.githubusercontent.com/miao-org/white-paper/main/docs${file}?v=${Date.now()}`, { cache: 'no-store', signal: AbortSignal.timeout(8000) })
       .then(response => {
         if (!response.ok) throw new Error(`Markdown HTTP ${response.status}`);
         return response.text();
@@ -66,6 +66,13 @@
         return markdown;
       });
       hook.doneEach(() => {
+        // Ignored asset links are relative to the Markdown file on GitHub, but
+        // to index.html in Docsify. Keep them valid under a Pages subdirectory.
+        document.querySelectorAll('.markdown-section a[href^="../data/"]').forEach(link => {
+          link.href = new URL(link.getAttribute('href').slice(3), location.href).href;
+        });
+        document.body.classList.toggle('tree-page', Boolean(document.querySelector('#knowledge-tree')));
+        window.RoboticsTree?.mount(document.querySelector('#knowledge-tree'), chinese ? 'zh-CN' : 'en');
         const title = document.querySelector('.markdown-section h1')?.textContent;
         document.title = title ? `${title} · Robotics Engineer Learning Plan` : (chinese ? '机器人工程师学习计划' : 'Robotics Engineer Learning Plan');
       });
